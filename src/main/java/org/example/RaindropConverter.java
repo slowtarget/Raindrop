@@ -1,4 +1,4 @@
-package org.example.raindrop.simple.simple;
+package org.example;
 
 public class RaindropConverter {
     public String convert(int number) {
