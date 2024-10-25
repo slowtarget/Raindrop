@@ -44,17 +44,17 @@ public class RaindropConverterStrategyTest {
 
     @Test
     public void tenNumbers() {
-        assertThat(raindrop(1, 10), equalTo("1,2,Pling,4,Plang,Pling,7,8,Pling,Plang"));
+        assertThat(raindrop(1, 10), equalTo("1,2,Pling,4,Plang,Pling,Plong,8,Pling,Plang"));
     }
 
     @Test
     public void ThirteenNumbers() {
-        assertThat(raindrop(1, 13), equalTo("1,2,Pling,4,Plang,Pling,7,8,Pling,Plang,11,Pling,Pling"));
+        assertThat(raindrop(1, 13), equalTo("1,2,Pling,4,Plang,Pling,Plong,8,Pling,Plang,11,Pling,Pling"));
     }
 
     @Test
     public void fifteenNumbers() {
-        assertThat(raindrop(1, 15), equalTo("1,2,Pling,4,Plang,Pling,7,8,Pling,Plang,11,Pling,Pling,14,PlingPlang"));
+        assertThat(raindrop(1, 15), equalTo("1,2,Pling,4,Plang,Pling,Plong,8,Pling,Plang,11,Pling,Pling,Plong,PlingPlang"));
     }
 
 //    @Test
