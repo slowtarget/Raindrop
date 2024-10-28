@@ -10,7 +10,7 @@ public enum RaindropConverterEnum {
     PLING(number -> "Pling", isFactor(3)),
     PLANG(number -> "Plang", isFactor(5)),
     PLONG(number -> "Plong", isFactor(7)),
-    PLING_CONTAINING_3(number -> "Pling", number -> String.valueOf(number).contains("3")),
+    PLING_CONTAINING_3(number -> "Pling", number -> Number.contains(number,"3")),
     DEFAULT(String::valueOf, number -> true);
 
     private static Applier isFactor(int... factors) {
