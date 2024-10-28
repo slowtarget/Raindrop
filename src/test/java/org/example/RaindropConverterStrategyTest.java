@@ -7,7 +7,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 //divisible by 3, 5 and 7
-//3 = Pling
+//3 = Pling (or contains a 3)
 //5 = Plang
 //7 = Plong
 //3 and 5 = PlingPlang

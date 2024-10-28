@@ -1,25 +1,15 @@
 package org.example;
 
+import java.util.Arrays;
+
 public class RaindropConverter {
     public String convert(int number) {
-        String result = "";
+        RaindropConverterEnum defaultStrategy = RaindropConverterEnum.DEFAULT;
 
-        if (number%3 == 0) {
-            result += "Pling";
-        }
-
-        if (number%5 == 0) {
-            result += "Plang";
-        }
-
-        if (number%7 == 0) {
-            result += "Plong";
-        }
-
-        if(result.isEmpty()) {
-            result += String.valueOf(number);
-        }
-
-        return result;
+        return Arrays.stream(RaindropConverterEnum.values())
+                        .filter(strategy->strategy.applies(number))
+                        .findFirst()
+                        .map(strategy->strategy.convert(number))
+                        .orElse(defaultStrategy.convert(number));
     }
 }
