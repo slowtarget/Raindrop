@@ -18,11 +18,11 @@ public enum RaindropConverterEnum {
     }
 
     private final Converter converter;
-    private final Applier applies;
+    private final Applier applier;
 
     RaindropConverterEnum(Converter converter, Applier applier) {
         this.converter = converter;
-        this.applies = applier;
+        this.applier = applier;
     }
 
     public String convert(int number) {
@@ -30,7 +30,7 @@ public enum RaindropConverterEnum {
     }
 
     public boolean applies(int number) {
-        return applies.applies(number);
+        return applier.applies(number);
     }
 
     @FunctionalInterface
